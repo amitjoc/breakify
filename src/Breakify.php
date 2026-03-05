@@ -4,44 +4,23 @@ namespace LineBreak;
 
 final class Breakify
 {
-    /**
-     * this variable is used when we don't know, where a script will be executed in web or cli
-     * default is set to PHP_EOL but will get value updated as script execution environment changes
-     * value will be updated in constructor
-     * @var string
-     */
-    private string $lineBreak;
+    /** @var string Internal buffer */
+    private string $output = '';
 
-    /**
-     * cli new line
-     * @var string
-     */
-    private string $nl;
+    /** @var string CLI newline – always PHP_EOL */
+    private string $newLine = PHP_EOL;
 
-    /**
-     * HTML break tag for web output.
-     * Used for rendering a <br /> element in output.
-     *
-     * @var string
-     */
-    private string $br = "<br />";
+    /** @var string HTML break tag */
+    private string $brTag = '<br>';
 
-    /**
-     * Horizontal rule HTML string for web output
-     * Used for rendering a <hr /> element in output.
-     * @var string
-     */
-    private string $hr = "<hr />";
+    /** @var string HTML horizontal tag */
+    private string $hrTag = "<hr />";
 
-    /**
-     * cli double new line
-     * @var string
-     */
-    private string $dnl;
-
-    private string $cr = "\r";
-
+    /** @var string cli tab */
     private string $tab = "\t";
+
+    /** @var int Current indentation level (spaces) */
+    private int $indentLevel = 0;
 
     public function __construct()
     {
