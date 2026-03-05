@@ -2,7 +2,7 @@
 
 namespace LineBreak;
 
-class Breakify
+final class Breakify
 {
     /**
      * this variable is used when we don't know, where a script will be executed in web or cli
