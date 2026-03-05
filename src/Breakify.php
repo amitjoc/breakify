@@ -1,6 +1,6 @@
 <?php
 
-namespace AJ\LineBreak;
+namespace LineBreak;
 
 class Breakify
 {
