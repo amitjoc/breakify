@@ -11,8 +11,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "AJ\\LineBreak\\": "src/",
-            "AJ\\LineBreak\\Tests\\": "tests/"
+            "LineBreak\\": "src/",
+            "LineBreak\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
@@ -25,7 +25,8 @@
     },
     "scripts": {
         "test": "phpunit --colors=always",
-        "lint": "phpcs --standard=PSR12 src/"
+        "lint": "phpcs --standard=PSR12 src/",
+        "ccov": "phpunit --coverage-html coverage-report"
     }
 
 }
