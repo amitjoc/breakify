@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php">
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src/</directory>   <!-- CHANGE THIS -->
+        </include>
+        <exclude>
+            <directory suffix=".php">tests/</directory>
+            <directory suffix=".php">vendor/</directory>
+        </exclude>
+    </coverage>
     <testsuites>
         <testsuite name="Breakify Test Suite">
             <directory>tests</directory>

@@ -112,3 +112,12 @@ $cliBreak->pNewLine(true)   //  echoes double line break
 ## Coding Standard
 
 - [x] PSR 4 or PSR12
+
+
+
+
+## CHANGES 
+
+- namespace updated to `LineBreak\\`
+- made breakify class final
+- 
